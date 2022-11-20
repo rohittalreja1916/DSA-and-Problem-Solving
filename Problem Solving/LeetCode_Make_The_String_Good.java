@@ -7,7 +7,6 @@ class LeetCode_Make_The_String_Good {
     public static String makeGood(String s) {
         StringBuilder sb = new StringBuilder(s);
         for(int i=0;i<sb.length()-1;i++){
-            System.out.println(sb +" "+i);
             if(Math.abs(sb.charAt(i)-sb.charAt(i+1))==32){
                 sb.delete(i, i+2);
                 i-=(i==0)?1:2;
