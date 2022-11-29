@@ -37,7 +37,6 @@ public class Tree {
         if (i < input.size()) {
             if(input.get(i)==null)return root;
             root = new TreeNode(input.get(i));
-            System.out.println(root.val);
             root.left = insertLevelOrder(input, 2 * i + 1);
             root.right = insertLevelOrder(input, 2 * i + 2);
         }
