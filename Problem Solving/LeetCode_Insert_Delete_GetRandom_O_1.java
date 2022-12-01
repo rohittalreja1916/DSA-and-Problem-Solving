@@ -4,7 +4,7 @@ class LeetCode_Insert_Delete_GetRandom_O_1 {
         char tasks[] = {'i','r','i','R','r','i','R'};
         int values[] = {1,2,2,0,1,2,0};
         
-        RandomizedSet r = new RandomizedSet();
+        RandomizedSet1 r = new RandomizedSet1();
         List<Object> ans = new ArrayList<>();
         ans.add(null);  //for object creation
         for(int i=0;i<values.length;i++){
@@ -18,6 +18,38 @@ class LeetCode_Insert_Delete_GetRandom_O_1 {
         System.out.println(ans);
     }
 }
+class RandomizedSet1 {
+    List<Integer> lst;
+    Set<Integer> set;
+    Random rnd;
+    public RandomizedSet1() {
+        lst = new ArrayList<>();
+        set = new HashSet<>();
+        rnd = new Random();
+    }
+    
+    public boolean insert(int val) {
+        if(set.contains(val))return false;
+        lst.add(val);
+        set.add(val);
+        return true;
+    }
+    
+    public boolean remove(int val) {
+        if(!set.contains(val))return false;
+        set.remove(val);
+        lst.remove(new Integer(val));
+        return true;
+    }
+    
+    public int getRandom() {
+        System.out.println("Set: "+set);
+        System.out.println("List: "+lst);
+        return lst.get(rnd.nextInt(lst.size()));
+    }
+}
+
+
 class RandomizedSet {
     List<Integer> lst;
     Map<Integer,Integer> map;
