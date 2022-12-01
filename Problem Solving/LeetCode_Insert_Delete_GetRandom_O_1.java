@@ -43,8 +43,6 @@ class RandomizedSet1 {
     }
     
     public int getRandom() {
-        System.out.println("Set: "+set);
-        System.out.println("List: "+lst);
         return lst.get(rnd.nextInt(lst.size()));
     }
 }
