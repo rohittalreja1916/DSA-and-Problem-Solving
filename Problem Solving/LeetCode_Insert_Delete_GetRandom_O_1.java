@@ -38,7 +38,7 @@ class RandomizedSet1 {
     public boolean remove(int val) {
         if(!set.contains(val))return false;
         set.remove(val);
-        lst.remove(new Integer(val));
+        lst.remove(Integer.valueOf(val));
         return true;
     }
     
