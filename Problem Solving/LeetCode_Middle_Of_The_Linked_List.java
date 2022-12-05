@@ -1,3 +1,4 @@
+//LinkedListImplement part code is given in Template 
 class LeetCode_Middle_Of_The_Linked_List{
     public static void main(String args[]){
         LinkedListImplement l = new LinkedListImplement();
